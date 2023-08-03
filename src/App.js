@@ -35,7 +35,7 @@ function App() {
   useEffect(()=>{
     setTimeout(() => {
       setState(true)
-    }, 4000);
+    }, 2000);
   },[])
 
   if(!state){

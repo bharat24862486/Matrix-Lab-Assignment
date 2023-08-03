@@ -9,8 +9,8 @@ const Loading = () => {
                 <Typed strings={[
                     "NFTify"
                 ]}
-                    typeSpeed={80}
-                    backSpeed={80}
+                    typeSpeed={40}
+                    backSpeed={40}
                     loop
                 />
             </Box>
