@@ -70,12 +70,12 @@ const MobSide = () => {
                     <DrawerHeader><Heading color={'#F7F9F9'} fontSize={'25px'} fontWeight={400} fontFamily="Pacifico, cursive">NFTify</Heading></DrawerHeader>
 
                     <DrawerBody>
-                        <Flex onClick={() => chnageState()} bgColor={bgColor1} p={'5% 8%'} mt={'8%'} justifyContent={'space-around'} alignItems={'center'} w={'100%'}>
+                        <Flex _hover={{cursor:"pointer"}} onClick={() => chnageState()} bgColor={bgColor1} p={'5% 8%'} mt={'8%'} justifyContent={'space-around'} alignItems={'center'} w={'100%'}>
                             <Image src={logo} w={['24px']} />
                             <Text fontSize={'16px'} fontWeight={400} >Token Address</Text>
                         </Flex>
 
-                        <Flex onClick={() => chnageState()}  bgColor={bgColor2} p={'5% 8%'} mt={'8%'} justifyContent={'space-around'} alignItems={'center'} w={'100%'}>
+                        <Flex _hover={{cursor:"pointer"}} onClick={() => chnageState()}  bgColor={bgColor2} p={'5% 8%'} mt={'8%'} justifyContent={'space-around'} alignItems={'center'} w={'100%'}>
                             <Image src={logo3} />
                             <Text fontSize={'16px'} fontWeight={400} >Pair Address &nbsp;&nbsp;&nbsp;</Text>
                         </Flex>

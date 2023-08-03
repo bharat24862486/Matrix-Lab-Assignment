@@ -34,12 +34,12 @@ const Side = () => {
                 <Image src={logo2} />
                 <Heading fontSize={'25px'} fontWeight={400} fontFamily="Pacifico, cursive">NFTify</Heading>
             </Flex>
-            <Flex onClick={()=>setState(!state)} bgColor={bgColor1} p={'5% 8%'} mt={'8%'} justifyContent={'space-around'} alignItems={'center'} w={'100%'}>
+            <Flex _hover={{cursor:"pointer"}} onClick={()=>setState(!state)} bgColor={bgColor1} p={'5% 8%'} mt={'8%'} justifyContent={'space-around'} alignItems={'center'} w={'100%'}>
                 <Image src={logo} w={['24px']} />
                 <Text fontSize={'16px'} fontWeight={400} >Token Address</Text>
             </Flex>
 
-            <Flex onClick={()=>setState(!state)} bgColor={bgColor2} p={'5% 8%'} mt={'8%'} justifyContent={'space-around'} alignItems={'center'} w={'100%'}>
+            <Flex _hover={{cursor:"pointer"}} onClick={()=>setState(!state)} bgColor={bgColor2} p={'5% 8%'} mt={'8%'} justifyContent={'space-around'} alignItems={'center'} w={'100%'}>
                 <Image src={logo3} />
                 <Text fontSize={'16px'} fontWeight={400} >Pair Address &nbsp;&nbsp;&nbsp;</Text>
             </Flex>
