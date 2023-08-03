@@ -7,6 +7,9 @@ const SinglePage = ({ item }) => {
     let address1 = item.baseToken.address.substring(38, 42)
     let address2 = item.baseToken.address.substring(38, 42)
     let address3 = item.quoteToken.address.substring(38, 42)
+    let Dex = item.dexId.substring(38, 42)
+    let dollar1 = item.priceNative.trim('').split('.')
+    let dollar2 = item.priceUsd.trim('').split('.')
 
     // console.log(address1, "address")
     // let address4 = item
@@ -40,7 +43,7 @@ const SinglePage = ({ item }) => {
                             Dex ID
                         </Text>
                         <Text fontSize={['12px']} fontWeight={600} w={'50%'}>
-                            {item.dexId}
+                            {Dex}
                         </Text>
                     </Flex>
                     <Flex mb={'45px'}>
@@ -52,7 +55,7 @@ const SinglePage = ({ item }) => {
                         </Text>
                     </Flex>
                     <Box w={'50px'} h={'50px'} display={'flex'} justifyContent={'center'} alignItems={'center'} overflow={'hidden'} position={'absolute'} bottom={2} right={2} border={'1px solid #960252'} borderRadius={'50%'} bgColor={'#960252'} >
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             info
                         </span>
                     </Box>
@@ -75,7 +78,7 @@ const SinglePage = ({ item }) => {
                         <Text fontSize={['12px']} fontWeight={600} w={'50%'}>{address2}</Text>
                     </Flex>
                     <Box w={'50px'} h={'50px'} display={'flex'} justifyContent={'center'} alignItems={'center'} overflow={'hidden'} position={'absolute'} bottom={2} right={2} border={'1px solid #960252'} borderRadius={'50%'} bgColor={'#960252'} >
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             token
                         </span>
                     </Box>
@@ -96,7 +99,7 @@ const SinglePage = ({ item }) => {
                         <Text fontSize={['12px']} fontWeight={600} w={'50%'}>{address3}</Text>
                     </Flex>
                     <Box w={'50px'} h={'50px'} display={'flex'} justifyContent={'center'} alignItems={'center'} overflow={'hidden'} position={'absolute'} bottom={2} right={2} border={'1px solid #960252'} borderRadius={'50%'} bgColor={'#960252'} >
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             token
                         </span>
                     </Box>
@@ -108,14 +111,14 @@ const SinglePage = ({ item }) => {
                     <Text fontSize={['16px']} m={'10px 0'}>Price</Text>
                     <Flex>
                         <Text fontSize={['12px']} fontWeight={600} w={'50%'}>Price Native</Text>
-                        <Text fontSize={['12px']} fontWeight={600} w={'50%'}>{item.priceNative}</Text>
+                        <Text fontSize={['12px']} fontWeight={600} w={'50%'}>${dollar1[0]}</Text>
                     </Flex>
                     <Flex>
                         <Text fontSize={['12px']} fontWeight={600} w={'50%'}>Price USD</Text>
-                        <Text fontSize={['12px']} fontWeight={600} w={'50%'}>{item.priceUsd}</Text>
+                        <Text fontSize={['12px']} fontWeight={600} w={'50%'}>${dollar2[0]}</Text>
                     </Flex>
                     <Box w={'50px'} h={'50px'} display={'flex'} justifyContent={'center'} alignItems={'center'} overflow={'hidden'} position={'absolute'} bottom={2} right={2} border={'1px solid #960252'} borderRadius={'50%'} bgColor={'#960252'} >
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                             attach_money
                         </span>
                     </Box>

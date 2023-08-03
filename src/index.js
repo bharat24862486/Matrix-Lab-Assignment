@@ -6,11 +6,18 @@ import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react';
 
 import { BrowserRouter } from "react-router-dom";
+import { Auth0Provider } from '@auth0/auth0-react';
 import ContextApiProvider from './ContextApi/ContextApi';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  
+  <Auth0Provider
+    domain="dev-af5p6xxstkhto7ta.us.auth0.com"
+    clientId="uOaZ4RGKAVazn9OFtNVGq1TW6cYyypOe"
+    authorizationParams={{
+      redirect_uri: window.location.origin
+    }}
+  >
     <ContextApiProvider>
       <BrowserRouter>
         <ChakraProvider>
@@ -18,7 +25,10 @@ root.render(
         </ChakraProvider>
       </BrowserRouter>
     </ContextApiProvider>
-  
+
+  </Auth0Provider>
+
+
 
 );
 
