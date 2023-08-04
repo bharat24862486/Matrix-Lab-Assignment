@@ -38,8 +38,10 @@ const RenderPage = () => {
                 
             }
         } else {
+            // let arr= []
             
-            axios.get(`https://api.dexscreener.com/latest/dex/search?q=${datas}`).then((res) => setData(res.data.pairs)).catch((err) => console.log(err))
+            axios.get(`https://api.dexscreener.com/latest/dex/search?q=${datas}`).then((res) => setData(res.data.pairs.sort((a,b)=>b.priceUsd - a.priceUsd))).catch((err) => console.log(err))
+            // console.log(arr)
             
         }
         console.log(datas)
